@@ -6,7 +6,7 @@
 1. Pick a target.  Mike Ward.
 2. Look at his followers and find the most followed one.  follwer_count attribute
 3. The most followed user two degrees away - follower of followers
-4. The most active user two degrees away - status's per week
+4. The most active user two degrees away
 5. The user who has the most friends is not passively being followed, they are active.
 6. How to store application and restart.
 """
@@ -96,7 +96,10 @@ readFile.close()
 # Reading tweets and collecting followers is a passive twitter activity, but active users
 # seek out/accept friendships.  I look for users with the most "friendships"
 
-# get those who mike followers
+
+##  THIS ONE TIMES OUT REALLY QUICKLY. I THOUGHT I GOT 180 HITS/16 MINS?
+
+# get those who mike follows
 mikes_friends = api.friends_ids(screen_name='3876')
 
 # what info am I storing?
